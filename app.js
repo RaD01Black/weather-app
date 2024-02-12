@@ -66,12 +66,14 @@ const getWeekDay = (date) => {
     data = data.list.filter(obj => obj.dt_txt.endsWith("12:00:00"))
     data.forEach((i) => {
         const forecastJSX = `
+        <div>
         <img alt"weather icon" src="http://openweathermap.org/img/w/${
             i.weather[0].icon
         }.png" />
         <h3>${getWeekDay(i.dt)}</h3>
         <p>${Math.round(i.main.temp)} °C</p>
         <span>${i.weather[0].main}</span>
+        </div>
         `;
         forecastContainer.innerHTML += forecastJSX;
     });
