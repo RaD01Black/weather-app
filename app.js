@@ -61,6 +61,7 @@ const searchHandler = async () => {
     renderCurrentWeather(currentData);
     const forecastData = await getWeatherData("forecast",cityName);
     renderForecastWeather(forecastData)
+ 
 };
 
 const positionCallBack = async (positon) => {
@@ -88,6 +89,7 @@ const initHandler = async () => {
     renderCurrentWeather(currentData);
     const forecastData = await getWeatherData("forecast","milan");
     renderForecastWeather(forecastData)
+    
 }
 
 searchButton.addEventListener("click" ,searchHandler)
